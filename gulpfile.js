@@ -4,6 +4,9 @@ import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
+import squoosh from 'gulp-libsquoosh';
+import svgo from 'gulp-svgmin';
+import terser from 'gulp-terser';
 
 // Styles
 
@@ -16,6 +19,24 @@ export const styles = () => {
     ]))
     .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
+}
+
+// Images
+
+export const optimizeImages = () => {
+  return gulp.src('source/img/*.{jpg,png}')
+  .pipe(squoosh())
+  .pipe(gulp.dest('source/img'))
+}
+
+// WebP
+
+export const turnToWebp = () => {
+  return gulp.src('source/img/*.{jpg,png}')
+  .pipe(squoosh(
+    {webp: {}}
+  ))
+  .pipe(gulp.dest('source/img'))
 }
 
 // Server

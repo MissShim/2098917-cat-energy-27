@@ -1,0 +1,17 @@
+$tablet-width: 768px;
+$desktop-width: 1200px;
+$mobile-width-only: 767px;
+
+$green: #68b738;
+$black: #000000;
+$grey: #e6e6e6;
+$white: #ffffff;
+
+$font-main: oswald, arial, sans-serif;
+$font-second: lato, arial, sans-serif;
+
+@mixin Center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

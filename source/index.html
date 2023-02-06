@@ -1,12 +1,87 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body>
+  <body class="page__body">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
+    <header class="header">
+      <h1 class="visually-hidden">Интернет-магазин "Кэт Энерджи"</h1>
+      <nav class="header__nav main-nav">
+        <div class="main-nav__menu-panel">
+          <div class="main-nav__logo">
+            <svg class="main-nav__logo-image main-nav__logo-image--mobile" width="34" height="38" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#mobile-logo" aria-hidden="true" focusable="false"></use>
+            </svg>
+            <svg class="main-nav__logo-image main-nav__logo-image--tablet" width="61" height="51" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#tablet-logo" aria-hidden="true" focusable="false"></use>
+            </svg>
+            <svg class="main-nav__logo-image main-nav__logo-image--desktop" width="71" height="59" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#desktop-logo" aria-hidden="true" focusable="false"></use>
+            </svg>
+          </div>
 
+          <svg class="main-nav__logo-text" width="118" height="22" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite.svg#cat-energy" aria-hidden="true" focusable="false"></use>
+          </svg>
+          <div class="main-nav__buttons">
+            <button class="main-nav__open main-nav__open--open" type="button">
+              <svg class="main-nav__open-icon" width="24" height="18">
+                <use xlink:href="img/sprite.svg#menu-open"></use>
+              </svg>
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <button class="main-nav__close main-nav__close-hide" type="button">
+              <svg class="main-nav__close-icon" width="20" height="20">
+                <use xlink:href="img/sprite.svg#close-menu"></use>
+              </svg>
+              <span class="visually-hidden">Закрыть меню</span>
+            </button>
+          </div>
+        </div>
+        <div class="main-nav__dropdown main-nav__dropdown--hide main-nav__dropdown--nojs">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--current" aria-label="Главная страница">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html" aria-label="Перейти на страницу с товарами">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html" aria-label="Перейти на страницу с подбором программы">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="hero">
+        <div class="hero__back">
+          <p class="hero__header">Функциональное питание для котов</p>
+          <p class="hero__text">Занялся собой? Займись котом!</p>
+        </div>
+        <div class="hero__can">
+          <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/index-can@1x.webp 1x, img/index-can@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 320px)" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1200px)" srcset="img/index-can@1x.png 1x, img/index-can@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg  2x">
+            <img class="hero__can-img" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" height="280" width="270" alt="Кошачья еда с курицей" loading="lazy">
+          </picture>
+          <a class="hero__can-link" href="#" aria-label="Подобрать программу питания">Подобрать программу</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+    </main>
+    <footer></footer>
+    <script src="js/menu.js"></script>
   </body>
 </html>
