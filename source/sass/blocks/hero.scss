@@ -21,6 +21,10 @@
   margin-top: -150px;
 }
 
+.hero__can picture {
+  display: flex;
+}
+
 .hero__header {
   font-family: $font-main;
   font-size: 36px;
@@ -56,4 +60,124 @@
   text-transform: uppercase;
   height: 40px;
   padding: 8px, 44px, 8px, 44px;
+}
+
+.hero__can-img {
+  width: 100%;
+  object-fit: cover;
+  padding: 0;
+  margin: 0 auto;
+  align-self: center;
+  flex-grow: 1;
+}
+
+@media (min-width: $tablet-width) {
+  .hero {
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero__back {
+    background: none;
+    background-color: $white;
+    color: $black;
+    align-items: flex-start;
+    padding-left: 118px;
+    padding-top: 0;
+    z-index: 2;
+    background-color: rgba($color: $white, $alpha: 0.0);
+  }
+
+  .hero__header {
+    color: $black;
+    font-size: 60px;
+    line-height: 60px;
+    width: 420px;
+    text-align: start;
+  }
+
+  .hero__text {
+    color: $black;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .hero__can {
+    position: absolute;
+    margin-top: 170px;
+    z-index: 0;
+  }
+
+  .hero__can-link {
+    width: 244px;
+    align-self: flex-start;
+    margin-left: 100px;
+    margin-top: -580px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .hero__can-img {
+    width: 709px;
+    height: 609px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .hero {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero__back {
+    position: initial;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    padding-top: 150px;
+  }
+
+  .hero__header {
+    margin-left: 190px;
+    margin-top: 70px;
+  }
+
+  .hero__text {
+    margin-left: 190px;
+    margin-top: 20px;
+  }
+
+  .hero__can {
+    width: 50%;
+    box-sizing: border-box;
+    height: 694px;
+    position: initial;
+    margin: 0;
+    padding: 0;
+    padding-top: 100px;
+    background:
+    linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    url("../img/index-background-desktop@1x.jpg") top center/cover no-repeat;
+  }
+
+  .hero__can-link {
+    margin: 0;
+    padding: 0;
+    margin-left: -530px;
+    margin-top: -180px;
+    height: 55px;
+
+  }
+
+  .hero__can-img {
+    width: 552px;
+    height: 499px;
+    margin-left: -490px;
+    margin-top: -145px;
+    padding: 0;
+  }
 }

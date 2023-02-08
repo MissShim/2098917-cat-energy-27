@@ -1,5 +1,12 @@
 .header {
-  color: #000000;
-  position: relative;
-  width: 100%;
+  background-color: $white;
+  color: $black;
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    width: 1440px;
+    margin: 0 auto;
+    position: relative;
+  }
 }
